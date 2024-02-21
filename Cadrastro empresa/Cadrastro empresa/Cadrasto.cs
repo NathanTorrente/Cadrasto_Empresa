@@ -13,12 +13,14 @@ namespace Cadrastro_empresa
     
     public partial class Cadrasto : Form
     {
-        private List<listagemdados> listagem_dados;    
+        public List<listagemdados> listagem_dados;
+        
 
         public Cadrasto()
         {
             InitializeComponent();
-
+            listagem_dados = new List<listagemdados>();
+          
         }
 
         private void Cadrasto_Load(object sender, EventArgs e)
@@ -39,8 +41,6 @@ namespace Cadrastro_empresa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
             try
             {
                 listagemdados empresa = new listagemdados();
@@ -59,14 +59,16 @@ namespace Cadrastro_empresa
                 empresa.cpfpropri = cpfpro.Text;
                 empresa.datainicio = dateTimePicker1.Value.ToString();
                 listagem_dados.Add(empresa);
+             
+                teladadoscs a = new teladadoscs(listagem_dados);
+                a.ShowDialog();
 
+              
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"ocorreu um erro! {ex.Message}");
-
             }
-         
         }
 
         private void situacao_SelectedIndexChanged(object sender, EventArgs e)

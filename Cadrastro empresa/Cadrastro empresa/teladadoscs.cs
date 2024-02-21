@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cadrastro_empresa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,33 +11,21 @@ using System.Windows.Forms;
 
 namespace Cadrastro_empresa
 {
-    private List<listagemdados> veiculosList;
     public partial class teladadoscs : Form
     {
-
-
-        public teladadoscs()
+        public List<listagemdados> listagem_dados;
+       
+        public teladadoscs(List<listagemdados> listagem_dados)
         {
             InitializeComponent();
-        }
-        public teladadoscs(List<listagemdados> listagem_Dados)
-        {
-            InitializeComponent();
-            dataGridView1.DataSource = null;
-            dataGridView1.Refresh();
-            dataGridView1.DataSource = listagem_Dados;
-        }
+            this.listagem_dados = listagem_dados;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void teladadoscs_Load(object sender, EventArgs e)
-        {
-            List<listagemdados> listagem_Dados;
+            // Defina a fonte de dados do DataGridView com a lista de dados
+            dataGridView1.DataSource = listagem_dados;
             dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.DataSource = listagem_Dados;
         }
+       
+
+ 
     }
 }
