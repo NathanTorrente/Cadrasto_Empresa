@@ -1,4 +1,4 @@
-namespace Cadrastro_empresa
+namespace Cadrastro_empresa.Classes
 {
     internal static class Program
     {

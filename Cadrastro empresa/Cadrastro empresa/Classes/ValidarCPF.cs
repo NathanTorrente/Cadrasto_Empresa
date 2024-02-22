@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cadrastro_empresa
+namespace Cadrastro_empresa.Classes
 {
     internal class ValidarCPF
     {

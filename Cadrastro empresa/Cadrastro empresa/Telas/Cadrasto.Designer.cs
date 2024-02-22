@@ -60,7 +60,7 @@
             radioButton7 = new RadioButton();
             radioButton8 = new RadioButton();
             label15 = new Label();
-            nomepropri = new TextBox();
+            nomepropris = new TextBox();
             cpfpro = new MaskedTextBox();
             grupobox = new GroupBox();
             grupobox2 = new GroupBox();
@@ -171,6 +171,7 @@
             // 
             // situacao
             // 
+            situacao.Enabled = false;
             situacao.FormattingEnabled = true;
             situacao.Items.AddRange(new object[] { "Ativa", "Nula", "Suspensa", "Inapta ", "Baixada" });
             situacao.Location = new Point(220, 285);
@@ -191,6 +192,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Simples Nacional";
             radioButton1.UseVisualStyleBackColor = false;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
@@ -423,12 +425,12 @@
             label15.TabIndex = 35;
             label15.Text = "Cpf do Proprietário:";
             // 
-            // nomepropri
+            // nomepropris
             // 
-            nomepropri.Location = new Point(954, 276);
-            nomepropri.Name = "nomepropri";
-            nomepropri.Size = new Size(201, 23);
-            nomepropri.TabIndex = 36;
+            nomepropris.Location = new Point(954, 276);
+            nomepropris.Name = "nomepropris";
+            nomepropris.Size = new Size(201, 23);
+            nomepropris.TabIndex = 36;
             // 
             // cpfpro
             // 
@@ -497,6 +499,7 @@
             button2.TabIndex = 42;
             button2.Text = "Cancelar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // dateTimePicker1
             // 
@@ -520,7 +523,7 @@
             Controls.Add(grupobox2);
             Controls.Add(grupobox);
             Controls.Add(cpfpro);
-            Controls.Add(nomepropri);
+            Controls.Add(nomepropris);
             Controls.Add(label15);
             Controls.Add(naturezaJ);
             Controls.Add(label14);
@@ -590,7 +593,7 @@
         private RadioButton radioButton7;
         private RadioButton radioButton8;
         private Label label15;
-        private TextBox nomepropri;
+        private TextBox nomepropris;
         private MaskedTextBox cpfpro;
         private GroupBox grupobox;
         private GroupBox grupobox2;

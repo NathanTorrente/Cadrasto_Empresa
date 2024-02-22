@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cadrastro_empresa
+namespace Cadrastro_empresa.Classes
 {
     public class listagemdados
     {
@@ -24,8 +24,8 @@ namespace Cadrastro_empresa
         public string capitalsocial { get; set; }
         public string enderecocompleto { get; set; }
         public string tipo { get; set; }
-        public string porte { get; set; }   
-        public string naturezajuris { get; set; }    
+        public string porte { get; set; }
+        public string naturezajuris { get; set; }
 
         public string nomeproprietario { get; set; }
         public string cpfpropri { get; set; }
